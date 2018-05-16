@@ -1,0 +1,6 @@
+framework module TYKYC {
+  umbrella header "TYKYC.h"
+
+  export *
+  module * { export * }
+}

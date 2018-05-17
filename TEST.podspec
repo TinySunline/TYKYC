@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint TYKYC.podspec' to ensure this is a
+#  Be sure to run `pod spec lint TEST.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "TYKYC"
-  s.version      = "1.0.0"
-  s.summary      = "A short description of TYKYC."
+  s.name         = "TEST"
+  s.version      = "0.0.1"
+  s.summary      = "A short description of TEST."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,10 +25,9 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                      TinyBuilder KYC Video
                    DESC
 
-  s.homepage     = "https://github.com/TinySunline/TYKYC"
+  s.homepage     = "http://EXAMPLE/TEST"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -39,7 +38,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT"
+  s.license      = "MIT (example)"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -64,8 +63,8 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform     = :ios
-  s.platform     = :ios, "8.0"
+  # s.platform     = :ios
+  # s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -80,8 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  # s.source       = { :git => "https://github.com/TinySunline/TYKYC", :tag => 1.0.0}
-  s.source       = { :git => "https://github.com/TinySunline/TYKYC", :tag => "1.0.0" }
+  s.source       = { :git => "http://EXAMPLE/TEST.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,23 +89,9 @@ Pod::Spec.new do |s|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-#需要包含的源文件 
-s.source_files = 'TYKYC.framework/Headers/*.{h}'
 
-#你的SDK路径
-s.vendored_frameworks = 'TYKYC.framework'
-
-#SDK头文件路径
-s.public_header_files = 'TYKYC.framework/Headers/*.h'
-
-#依赖库
-# s.libraries    = 'sqlite3','icucore','z'
-
-#依赖库
-s.frameworks   = 'UIKit','Foundation'
-
-  # s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  # s.exclude_files = "Classes/Exclude"
+  s.source_files  = "Classes", "Classes/**/*.{h,m}"
+  s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
